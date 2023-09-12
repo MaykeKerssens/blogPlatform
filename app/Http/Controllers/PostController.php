@@ -32,9 +32,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->post());
         Post::create($request->post());
-
         return redirect()->route('dashboard');
     }
 

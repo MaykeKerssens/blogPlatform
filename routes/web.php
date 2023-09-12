@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,8 @@ Route::get('/', function () {
 Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
 Route::resource('/posts', PostController::class)->except(['index'])->middleware(['auth', 'verified']);
 Route::get('post/{id}', [PostController::class, 'post'])->name('post');
+
+Route::resource('/comments', CommentController::class)->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

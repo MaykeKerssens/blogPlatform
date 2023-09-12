@@ -24,6 +24,26 @@
             <ul class="p-6">
             <h4 class="font-bold text-l">Comments:</h4>
 
+            <h4>Add comment:</h4>
+            <form action="{{ route('comments.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div>
+                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                    <input type="hidden" name="post_id" value="{{ $post->id }}">
+
+                    <div>
+                        <div>
+                            <input type="text" name="content" placeholder=".....">
+                        </div>
+                    </div>
+
+                    <button type="submit">Comment</button>
+                </div>
+            </form>
+
+
+
+
                 @foreach ($post->comments as $comment)
                 <li>
                     <div class="m-1 rounded-lg p-2 bg-slate-300">

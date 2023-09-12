@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -27,7 +28,14 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    $postId = $request->input('post_id');
+        Comment::create([
+            'user_id' => $request->input('user_id'),
+            'post_id' => $postId,
+            'content' => $request->input('content')
+        ]);
+
+        return redirect()->route('post', ['id' => $postId]);
     }
 
     /**
