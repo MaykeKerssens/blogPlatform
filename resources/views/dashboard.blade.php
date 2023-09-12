@@ -9,10 +9,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <a href="{{route('posts.create')}}" class="bg-white text-gray-900 p-2 shadow-sm sm:rounded-lg mx-10">Add Post</a>
             @foreach ($posts as $post)
+
                 <div class="bg-gray-200 shadow-sm sm:rounded-lg m-10">
                     <div class="p-4">
                         <div class="flex">
-                            <h4 class="font-bold text-xl text-gray-900">{{ $post->title }}</h4>
+                            <a href="{{ route('post', $post->id) }}">
+                                <h4 class="font-bold text-xl text-gray-900">{{ $post->title }}</h4>
+                            </a>
+
                             <p class="pl-4 text-base text-gray-800">{{ $post->user->name }}</p>
                         </div>
                         {{-- //TODO: Add date added --}}

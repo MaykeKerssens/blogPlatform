@@ -55,6 +55,17 @@ class PostController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function post(string $id)
+    {
+        $post = Post::find($id);
+        return view('posts.index',[
+            'post' => $post
+        ]);
+    }
+
+    /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)

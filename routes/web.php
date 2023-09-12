@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
 Route::resource('/posts', PostController::class)->except(['index'])->middleware(['auth', 'verified']);
+Route::get('post/{id}', [PostController::class, 'post'])->name('post');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
