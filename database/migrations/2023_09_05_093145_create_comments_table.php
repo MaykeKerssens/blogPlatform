@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->references('id')->on('users');
             $table->foreignId('post_id')->references('id')->on('posts');
             $table->string('content');
+            $table->integer('up_vote')->default(0);
+            $table->integer('down_vote')->default(0);
             $table->timestamps();
         });
     }
