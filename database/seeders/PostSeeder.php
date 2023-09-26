@@ -22,37 +22,37 @@ class PostSeeder extends Seeder
         Post::create([
             'title' => 'Probleem 2',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 1
+            'user_id' => 2
         ]);
 
         Post::create([
             'title' => 'Probleem 3',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 3
+            'user_id' => 2
         ]);
 
         Post::create([
             'title' => 'Probleem 4',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 6
+            'user_id' => 2
         ]);
 
         Post::create([
             'title' => 'Probleem 5',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 4
+            'user_id' => 2
         ]);
 
         Post::create([
             'title' => 'Probleem 6',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 5
+            'user_id' => 2
         ]);
 
         Post::create([
             'title' => 'Probleem 7',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 5
+            'user_id' => 2
         ]);
 
         Post::create([
@@ -64,13 +64,13 @@ class PostSeeder extends Seeder
         Post::create([
             'title' => 'Probleem 9',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 1
+            'user_id' => 2
         ]);
 
         Post::create([
             'title' => 'Probleem 10',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. ',
-            'user_id' => 3
+            'user_id' => 2
         ]);
 
 

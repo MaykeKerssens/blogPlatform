@@ -24,6 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
+        $this->middleware(['role:author']);
         return view('posts.create');
     }
 
@@ -32,6 +33,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->middleware(['role:author']);
         Post::create($request->post());
         return redirect()->route('dashboard');
     }
@@ -49,7 +51,7 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $this->middleware(['role:author']);
     }
 
     /**
@@ -68,7 +70,7 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->middleware(['role:author']);
     }
 
     /**
@@ -76,6 +78,6 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $this->middleware(['role:author']);
     }
 }

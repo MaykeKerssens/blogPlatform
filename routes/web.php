@@ -20,10 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => ['role:auther']], function () {
+    Route::resource('/posts', PostController::class)->except(['index'])->middleware(['auth', 'verified']);
+});
 Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
-Route::resource('/posts', PostController::class)->except(['index'])->middleware(['auth', 'verified']);
 Route::get('post/{id}', [PostController::class, 'post'])->name('post');
-
 Route::resource('/comments', CommentController::class)->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {

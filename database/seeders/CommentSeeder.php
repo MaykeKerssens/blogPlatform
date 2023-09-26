@@ -15,7 +15,7 @@ class CommentSeeder extends Seeder
     {
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor. Cras sed felis eget velit aliquet sagittis id.',
-            'user_id' => 1,
+            'user_id' => 2,
             'post_id' => 1
         ]);
 
@@ -27,13 +27,13 @@ class CommentSeeder extends Seeder
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor. Cras sed felis eget velit aliquet sagittis id.',
-            'user_id' => 3,
+            'user_id' => 2,
             'post_id' => 1
         ]);
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 4,
+            'user_id' => 2,
             'post_id' => 1
         ]);
 
@@ -41,7 +41,7 @@ class CommentSeeder extends Seeder
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor. Cras sed felis eget velit aliquet sagittis id.',
-            'user_id' => 1,
+            'user_id' => 2,
             'post_id' => 2
         ]);
 
@@ -55,13 +55,13 @@ class CommentSeeder extends Seeder
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor. Cras sed felis eget velit aliquet sagittis id.',
-            'user_id' => 3,
+            'user_id' => 2,
             'post_id' => 3
         ]);
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 4,
+            'user_id' => 2,
             'post_id' => 3
         ]);
 
@@ -69,7 +69,7 @@ class CommentSeeder extends Seeder
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor. Cras sed felis eget velit aliquet sagittis id.',
-            'user_id' => 5,
+            'user_id' => 2,
             'post_id' => 5
         ]);
 
@@ -77,21 +77,21 @@ class CommentSeeder extends Seeder
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 4,
+            'user_id' => 2,
             'post_id' => 6
         ]);
 
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 6,
+            'user_id' => 2,
             'post_id' => 7
         ]);
 
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 3,
+            'user_id' => 2,
             'post_id' => 8
         ]);
 
@@ -99,19 +99,19 @@ class CommentSeeder extends Seeder
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 1,
+            'user_id' => 2,
             'post_id' => 9
         ]);
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 5,
+            'user_id' => 2,
             'post_id' => 9
         ]);
 
         Comment::create([
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum.',
-            'user_id' => 4,
+            'user_id' => 2,
             'post_id' => 9
         ]);
 

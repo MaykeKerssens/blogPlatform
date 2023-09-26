@@ -13,41 +13,46 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        $user1 = User::create([
             'name' => 'Fedde van Gils',
-            'email' => 'f.vangils@curio.nl',
-            'password' => Hash::make('welkom123')
+            'email' => 'subscriber@test.com',
+            'password' => Hash::make('12345678')
         ]);
+        $user1->assignRole('subscriber');
+        $user1->save();
 
-        User::create([
+        $user2 = User::create([
             'name' => 'Mayke Kerssens',
-            'email' => 'test@test.nl',
+            'email' => 'auther@test.com',
             'password' => Hash::make('12345678')
         ]);
+        $user2->assignRole('subscriber');
+        $user2->assignRole('author');
+        $user2->save();
 
-
-        User::create([
-            'name' => 'Piet',
-            'email' => 'test1@test.nl',
-            'password' => Hash::make('12345678')
-        ]);
-
-        User::create([
+        $user3 = User::create([
             'name' => 'Jan',
             'email' => 'test2@test.com',
             'password' => Hash::make('12345678')
         ]);
+        $user3->assignRole('subscriber');
+        $user3->save();
 
-        User::create([
+        $user4 =User::create([
             'name' => 'Isabel',
             'email' => 'test3@test.com',
             'password' => Hash::make('12345678')
         ]);
+        $user4->assignRole('subscriber');
+        $user4->save();
 
-        User::create([
+        $user5 = User::create([
             'name' => 'Kiki',
             'email' => 'test4@test.com',
             'password' => Hash::make('12345678')
         ]);
+        $user5->assignRole('subscriber');
+        $user5->save();
     }
+
 }
