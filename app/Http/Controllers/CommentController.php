@@ -69,4 +69,20 @@ class CommentController extends Controller
     {
         //
     }
+
+        /**
+     * Add 1 upvote to a comment
+     */
+    public function upvote(string $id)
+    {
+        dd('upvote');
+    }
+
+            /**
+     * Add 1 downvote to a comment
+     */
+    public function downvote(string $id)
+    {
+        dd('downvote');
+    }
 }
