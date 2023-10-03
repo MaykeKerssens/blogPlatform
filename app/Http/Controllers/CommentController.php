@@ -76,6 +76,7 @@ class CommentController extends Controller
     public function upvote(string $id)
     {
         // TODO: Check if user is logged in, otherwise don't allow them to upvote
+        // TODO: Make sure user can only upvote once
         $comment = Comment::find($id);
         $comment->up_vote ++;
         $comment->save();
@@ -89,6 +90,7 @@ class CommentController extends Controller
     public function downvote(string $id)
     {
         // TODO: Check if user is logged in, otherwise don't allow them to downvote
+        // TODO: Make sure user can only upvote once
         $comment = Comment::find($id);
         $comment->down_vote ++;
         $comment->save();
