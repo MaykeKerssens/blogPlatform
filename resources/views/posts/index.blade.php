@@ -58,6 +58,7 @@
                                     @csrf
                                     <x-primary-button class="bg-red-500 dark:bg-red-500">- {{ $comment->down_vote }}</x-primary-button>
                                 </form>
+                                <x-report-button :comment="$comment"/>
                             </div>
 
                         </div>
@@ -68,3 +69,27 @@
     </div>
 
 </x-app-layout>
+
+
+ {{-- //TODO: Move javascript code to seperate file? --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Handle form submission
+        $('#submitReport').on('click', function() {
+            $.ajax({
+                type: 'POST',
+                url: '/report', // Replace with your route for handling the report submission
+                data: $('#reportForm').serialize(),
+                success: function(response) {
+                    // Handle success, e.g., close the modal or show a success message
+                    $('#reportModal').modal('hide');
+                },
+                error: function(error) {
+                    // Handle error, e.g., display an error message
+                }
+            });
+        });
+    });
+</script>
