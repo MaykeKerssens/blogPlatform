@@ -70,19 +70,29 @@ class CommentController extends Controller
         //
     }
 
-        /**
+    /**
      * Add 1 upvote to a comment
      */
     public function upvote(string $id)
     {
-        dd('upvote');
+        // TODO: Check if user is logged in, otherwise don't allow them to upvote
+        $comment = Comment::find($id);
+        $comment->up_vote ++;
+        $comment->save();
+
+        return back();
     }
 
-            /**
+    /**
      * Add 1 downvote to a comment
      */
     public function downvote(string $id)
     {
-        dd('downvote');
+        // TODO: Check if user is logged in, otherwise don't allow them to downvote
+        $comment = Comment::find($id);
+        $comment->down_vote ++;
+        $comment->save();
+
+        return back();
     }
 }
